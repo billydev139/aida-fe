@@ -6,7 +6,9 @@ import Layers2 from "../assets/layers2.png";
 import Eclipse from "../assets/eclipse.png";
 import Group from "../assets/group.png";
 import Legal from "../assets/legal.png";
-import Photo from "../assets/Photo.png"
+import Photo from "../assets/Photo.png";
+import Plans from "../assets/plans.png";
+
 
 import { BsArrowRight, BsFileSpreadsheet, BsStars } from "react-icons/bs";
 import { BiCopy, BiDiamond, BiMessageSquare } from "react-icons/bi";
@@ -62,16 +64,18 @@ const Home = () => {
   const testimonials = [
     {
       title: "Incredible Experience",
-      content: "We had an incredible experience working with AIDA and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the concept so quickly.",
+      content:
+        "We had an incredible experience working with AIDA and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the concept so quickly.",
       author: "Anya Tailor Joy",
-      role: "CEO, SF Headline"
+      role: "CEO, SF Headline",
     },
     {
-        title: "Incredible Experience",
-        content: "We had an incredible experience working with AIDA and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the concept so quickly.",
-        author: "Anya Tailor Joy",
-        role: "CEO, SF Headline"
-      }
+      title: "Incredible Experience",
+      content:
+        "We had an incredible experience working with AIDA and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the concept so quickly.",
+      author: "Anya Tailor Joy",
+      role: "CEO, SF Headline",
+    },
   ];
   return (
     <div>
@@ -92,14 +96,14 @@ const Home = () => {
             Empowering Your{" "}
             <span className="text-[#3077FF]">Legal Journey</span>
           </h1>
-          <p className="text-[16px] font-normal pb-4 text-center text-white">
+          <p className="text-[16px] font-normal pb-8 text-center text-white">
             We are dedicated to making legal services accessible. From drafting
             contracts to managing
             <br /> petitions, our AI-powered platform offers tailored solutions
             for all your legal needs.
           </p>
 
-          <div className="max-w-4xl mx-auto pb-6">
+          <div className="max-w-4xl mx-auto pb-8">
             <div className=" bg-[#F8F1F180] border border-[#ffffff] bg-opacity-50 backdrop-blur-md rounded-full px-2 py-1 flex items-center gap-6">
               {/* New button */}
               <button className="flex items-center gap-1 px-4 py-2 rounded-full bg-[#ffffff] text-[#000000] font-medium text-[16px] transition-colors">
@@ -204,7 +208,7 @@ const Home = () => {
           width: "auto", // Example width
         }}
       ></div>
-      <div className=" container mx-auto -mt-[70px] flex justify-center items-center">
+      <div className=" container mx-auto -mt-[70px] mb-24 flex justify-center items-center">
         <div>
           <h1 className="text-[48px] text-[#092D50] text-center font-semibold mb-2">
             Explore Common Legal Questions
@@ -293,7 +297,7 @@ const Home = () => {
             What Can AiDA Do for You?
           </p>
 
-          <div className="flex gap-4 p-4">
+          <div className="flex gap-4 p-4 mb-24">
             {cards.map((card, index) => (
               <div
                 key={index}
@@ -319,7 +323,7 @@ const Home = () => {
       </div>
 
       <div
-      className="flex justify-center items-center"
+        className="flex justify-center items-center"
         style={{
           backgroundImage: `url(${Legal})`,
           backgroundSize: "cover", // Ensures the image covers the entire div
@@ -340,7 +344,7 @@ const Home = () => {
             </div>
 
             <h1 className="text-[48px] text-white font-normal mb-6 max-w-xl">
-              Unveiling the Impact of <br/> Smart Legal Solutions
+              Unveiling the Impact of <br /> Smart Legal Solutions
             </h1>
 
             <button className="bg-transparent border border-[#ffffff]  rounded-lg text-[18px] font-semibold text-[#ffffff] px-10 py-2 ">
@@ -350,7 +354,7 @@ const Home = () => {
           {/* Stats Grid */}
           <div className="grid grid-cols-2  gap-8 mt-12">
             {[
-              { value: "12K+", label: "Active Users",},
+              { value: "12K+", label: "Active Users" },
               {
                 value: "25K+",
                 label: "Chats Completed",
@@ -365,10 +369,14 @@ const Home = () => {
               },
             ].map((stat, index) => (
               <div key={index} className="ml-36">
-                <div className={`text-[70px] text-white font-bold ${stat.color}`}>
+                <div
+                  className={`text-[70px] text-white font-bold ${stat.color}`}
+                >
                   {stat.value}
                 </div>
-                <div className="text-[18px]  font-medium text-[#2672FF]">{stat.label}</div>
+                <div className="text-[18px]  font-medium text-[#2672FF]">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -387,44 +395,68 @@ const Home = () => {
         }}
       >
         <div>
-             <h1 className="text-[48px] text-[#092D50] text-center font-semibold mb-4">
-          What Our Users Say          </h1>
+          <h1 className="text-[48px] text-[#092D50] text-center font-semibold mb-4">
+            What Our Users Say{" "}
+          </h1>
           <p className="text-[18px] text-center text-[#092D50] font-normal mb-2">
             What Can AiDA Do for You?
           </p>
-          </div>
+        </div>
       </div>
 
-<div className=" container mx-auto -mt-[80px] flex justify-center items-center">
+      <div className=" container mx-auto -mt-[80px] flex justify-center items-center">
         <div>
-     
-
           <div className="flex flex-wrap gap-4 mb-12">
-      {testimonials.map((testimonial, index) => (
-        <div key={index} >
-        <div className="p-6 bg-white text-center border-[#E0E0E1] shadow-2xl  border-opacity-50  shadow-[#95CFFF61] border rounded-lg max-w-lg py-12 px-6">
-          <h2 className="text-[24px] text-[#151617] font-medium mb-4">{testimonial.title}</h2>
-          <p className="text-[#4F4F4F] mb-6">{testimonial.content}</p>
+            {testimonials.map((testimonial, index) => (
+              <div key={index}>
+                <div className="p-6 bg-white text-center border-[#E0E0E1] shadow-2xl  border-opacity-50  shadow-[#95CFFF61] border rounded-lg max-w-lg py-12 px-6">
+                  <h2 className="text-[24px] text-[#151617] font-medium mb-4">
+                    {testimonial.title}
+                  </h2>
+                  <p className="text-[#4F4F4F] mb-6">{testimonial.content}</p>
+                </div>
+                <div className="flex justify-center gap-3 mt-8 mb-6 items-center">
+                  <img src={Photo} className="rounded-full" />
+                  <div>
+                    <h3 className="font-bold text-[18px] text-[#151617]">
+                      {testimonial.author}
+                    </h3>
+                    <p className="text-[#4F4F4F] text-[14px]">
+                      {testimonial.role}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="flex justify-center items-start"
+        style={{
+          backgroundImage: `url(${Layers2})`,
+          backgroundSize: "cover", // Ensures the image covers the entire div
+          backgroundRepeat: "no-repeat", // Prevents tiling
+          backgroundPosition: "center", // Centers the image
+          height: "387px", // Example height
+          width: "auto", // Example width
+        }}
+      >
+        <div>
+          <h1 className="text-[48px] text-[#092D50] text-center font-semibold ">
+            Subscription Plans{" "}
+          </h1>
       
         </div>
-            <div className="flex justify-center gap-3 mt-8 mb-6 items-center">
-                <img src={Photo} className="rounded-full"/>
-            <div>
-              <h3 className="font-bold text-[18px] text-[#151617]">{testimonial.author}</h3>
-              <p className="text-[#4F4F4F] text-[14px]">{testimonial.role}</p>
-            </div>
-          </div>
-          </div>
-      ))}
-    </div>
-        </div>
       </div>
-      <Footer/>
+      <div  className=" container mx-auto -mt-[280px] flex justify-center items-center mb-10">
+      <img src={Plans}/>
+      </div>
+
+      <Footer />
     </div>
   );
 };
 
 export default Home;
-
-
-
