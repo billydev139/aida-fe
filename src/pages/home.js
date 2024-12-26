@@ -9,7 +9,6 @@ import Legal from "../assets/legal.png";
 import Photo from "../assets/Photo.png";
 import Plans from "../assets/plans.png";
 
-
 import { BsArrowRight, BsFileSpreadsheet, BsStars } from "react-icons/bs";
 import { BiCopy, BiDiamond, BiMessageSquare } from "react-icons/bi";
 import { FiFileText } from "react-icons/fi";
@@ -91,19 +90,19 @@ const Home = () => {
           width: "auto", // Example width
         }}
       >
-        <div className="">
-          <h1 className="text-[48px] font-semibold pb-4 text-[#ffff]">
+        <div className="container mx-auto lg:px-20 px-8 ">
+          <h1 className="lg:text-[48px] md:text-[32px] sm:[32px] text-[32px] text-center font-semibold pb-4 text-[#ffff]">
             Empowering Your{" "}
             <span className="text-[#3077FF]">Legal Journey</span>
           </h1>
-          <p className="text-[16px] font-normal pb-8 text-center text-white">
+          <p className="lg::text-[16px] text-[14px] font-normal pb-8 text-center text-white">
             We are dedicated to making legal services accessible. From drafting
             contracts to managing
             <br /> petitions, our AI-powered platform offers tailored solutions
             for all your legal needs.
           </p>
 
-          <div className="max-w-4xl mx-auto pb-8">
+          <div className="lg:max-w-4xl w-auto mx-auto pb-8">
             <div className=" bg-[#F8F1F180] border border-[#ffffff] bg-opacity-50 backdrop-blur-md rounded-full px-2 py-1 flex items-center gap-6">
               {/* New button */}
               <button className="flex items-center gap-1 px-4 py-2 rounded-full bg-[#ffffff] text-[#000000] font-medium text-[16px] transition-colors">
@@ -113,11 +112,11 @@ const Home = () => {
 
               {/* Title section */}
               <div className="flex-1 flex items-center gap-2 text-white">
-                <span className="text-[#262627] font-semibold text-[16px]">
+                <span className="text-[#262627] font-semibold text-[16px] whitespace-nowrap">
                   Introducing:
                 </span>
-                <span className="truncate text-[#000000] font-medium">
-                  What can an artificial intelligence specialised in Turkish law
+                <span className="truncate text-[#000000] font-medium lg:text-sm text-[12px] sm:text-base lg:max-w-auto max-w-[0px] md:max-w-[300px]">
+                  What can an artificial intelligence specialized in Turkish law
                   do at most?
                 </span>
               </div>
@@ -128,11 +127,11 @@ const Home = () => {
               </button>
             </div>
           </div>
-          <div className=" w-full flex justify-center gap-4 items-center">
-            <button className=" bg-[#0057FF] rounded-lg text-[18px] font-semibold text-[#ffffff] px-16 py-2 ">
+          <div className=" w-full flex md:flex-row flex-col justify-center gap-4 items-center">
+            <button className=" bg-[#0057FF] rounded-lg lg:text-[18px] text-[14px] font-semibold text-[#ffffff] px-16 py-2 ">
               Try Me
             </button>
-            <button className="bg-transparent border border-[#ffffff]  rounded-lg text-[18px] font-semibold text-[#ffffff] px-10 py-2 ">
+            <button className="bg-transparent border border-[#ffffff]  rounded-lg lg:text-[18px] text-[]14px font-semibold text-[#ffffff] px-10 py-2 ">
               Learn More
             </button>
           </div>
@@ -141,12 +140,12 @@ const Home = () => {
 
       {/* //tryaida */}
 
-      <div className="w-full container mx-auto -mt-[40px] bg-white rounded-lg shadow-lg px-12 py-8">
-        <h1 className="text-[48px] text-[#092D50] font-semibold mb-4">
+      <div className="w-full container mx-auto -mt-[40px] bg-white rounded-lg shadow-lg lg:px-12 px-6 py-8">
+        <h1 className="lg:text-[48px] text-[24px] text-[#092D50] font-semibold mb-4">
           Try AiDA, You Will Get the Answer
         </h1>
 
-        <p className="text-sm text-[#092D50] text-[18px] font-medium mb-6">
+        <p className="text-sm text-[#092D50] lg:text-[18px] text-[14px] font-medium mb-6">
           Type your question below and experience AiDA's power.
         </p>
 
@@ -158,7 +157,7 @@ const Home = () => {
             onChange={(e) => setQuestion(e.target.value)}
             className="w-full pr-28 pl-8  text-[#B6B6B6] text-[18px] font-normal rounded-lg py-4 bg-[#F3F3F3] border  outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
-          <button className="absolute right-1 top-3   bg-[#0057FF] text-[16px] font-medium hover:bg-blue-700 text-white px-6 py-2 rounded-full flex items-center gap-2 transition-colors">
+          <button className="absolute  right-1 top-3   bg-[#0057FF] text-[16px] font-medium hover:bg-blue-700 text-white px-6 py-2 rounded-full hidden md:flex lg:flex items-center gap-2 transition-colors">
             <span>Chat to AiDA</span>
             {/* Simple chat icon using SVG */}
             <svg
@@ -210,10 +209,10 @@ const Home = () => {
       ></div>
       <div className=" container mx-auto -mt-[70px] mb-24 flex justify-center items-center">
         <div>
-          <h1 className="text-[48px] text-[#092D50] text-center font-semibold mb-2">
+          <h1 className="lg:text-[48px] text-[32px] text-[#092D50] text-center font-semibold mb-2">
             Explore Common Legal Questions
           </h1>
-          <p className="text-[18px] text-center text-[#092D50] font-normal mb-2">
+          <p className="lg:text-[18px] sm:text-[14px] text-center text-[#092D50] font-normal mb-2">
             Discover what others are asking AiDA and see its expert responses
           </p>
 
@@ -246,30 +245,32 @@ const Home = () => {
       </div>
       {/* why choose aida */}
       <div
-        className="flex  justify-center"
+        className="flex lg:h-[802px] h-[910px]  justify-center"
         style={{
           backgroundImage: `url(${Eclipse})`,
           backgroundSize: "cover", // Ensures the image covers the entire div
           backgroundRepeat: "no-repeat", // Prevents tiling
           backgroundPosition: "center", // Centers the image
-          height: "810px", // Example height
+          // Example height
           width: "auto", // Example width
         }}
       >
-        <div className="container mx-auto py-8  flex  justify-between items-center">
+        <div className="container mx-auto py-8 px-12  flex lg:flex-row flex-col  justify-between items-center">
           <div className=" max-w-[550px]">
-            <h1 className="text-[56px] text-[#ffff] mb-4 font-semibold ">
+            <h1 className="lg:text-[56px] text-[32px] lg:text-start text-center  text-[#ffff] mb-4 font-semibold ">
               Why Choose AiDA?
             </h1>
-            <p className="text-[24px]  text-white  mb-4 font-normal">
+            <p className="lg:text-[24px] text-[14px] lg:text-start text-center text-white  mb-4 font-normal">
               AiDA is a powerful AI assistant designed to simplify legal
               processes in Turkey. Whether it’s drafting petitions, answering
               legal queries, or providing legal templates, AiDA saves you time
               and effort with accurate and reliable answers
             </p>
-            <button className="bg-transparent border border-[#ffffff]  rounded-lg text-[18px] font-semibold text-[#ffffff] px-10 py-2 ">
-              Learn More
-            </button>
+            <div className="flex lg:justify-start justify-center ">
+              <button className="bg-transparent border border-[#ffffff]  rounded-lg text-[18px] font-semibold text-[#ffffff] px-10 py-2 ">
+                Learn More
+              </button>
+            </div>
           </div>
           <div>
             <img src={Group} className="h-full w-full" />
@@ -288,16 +289,16 @@ const Home = () => {
         }}
       ></div>
 
-      <div className=" container mx-auto -mt-[70px] flex justify-center items-center">
+      <div className=" container mx-auto lg:-mt-[70px] -mt-[270px] flex justify-center items-center">
         <div>
-          <h1 className="text-[48px] text-[#092D50] text-center font-semibold mb-4">
+          <h1 className="lg:text-[48px] text-[32px] text-[#092D50] text-center font-semibold mb-4">
             Features Sections
           </h1>
-          <p className="text-[18px] text-center text-[#092D50] font-normal mb-2">
+          <p className=" lg:text-[18px] text-[14px] text-center text-[#092D50] font-normal mb-2">
             What Can AiDA Do for You?
           </p>
 
-          <div className="flex gap-4 p-4 mb-24">
+          <div className="flex lg:flex-row flex-col gap-4 p-4 mb-24">
             {cards.map((card, index) => (
               <div
                 key={index}
@@ -323,36 +324,37 @@ const Home = () => {
       </div>
 
       <div
-        className="flex justify-center items-center"
+        className="flex justify-center items-center lg:h-[402px] h-[677px]"
         style={{
           backgroundImage: `url(${Legal})`,
           backgroundSize: "cover", // Ensures the image covers the entire div
           backgroundRepeat: "no-repeat", // Prevents tiling
           backgroundPosition: "center", // Centers the image
-          height: "402px", // Example height
+          // Example height
           width: "auto", // Example width
         }}
       >
         {/* Content */}
-        <div className="relative container items-center px-24 flex justify-between mx-auto z-10">
+        <div className="relative container items-center lg:px-24 px-12 flex lg:flex-row flex-col lg:justify-between justify-center lg:gap-0 gap-6 mx-auto z-10">
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center lg:justify-start mt-6 justify-center gap-2 mb-4">
               <BiDiamond size={16} className="text-[#ffff]" />
-              <span className="text-[text-[16px] text-[#ffff]">
+              <span className="text-[16px] text-[#ffff]">
                 The Legal AI Toolkit
               </span>
             </div>
 
-            <h1 className="text-[48px] text-white font-normal mb-6 max-w-xl">
+            <h1 className="lg:text-[48px] text-[30px] text-white font-normal lg:text-start text-center mb-6 lg:max-w-xl w-full">
               Unveiling the Impact of <br /> Smart Legal Solutions
             </h1>
-
-            <button className="bg-transparent border border-[#ffffff]  rounded-lg text-[18px] font-semibold text-[#ffffff] px-10 py-2 ">
-              Learn More
-            </button>
+            <div className="flex items-center lg:justify-start justify-center gap-2 mb-4">
+              <button className="bg-transparent border border-[#ffffff]  rounded-lg text-[18px] font-semibold text-[#ffffff] px-10 py-2 ">
+                Learn More
+              </button>
+            </div>
           </div>
           {/* Stats Grid */}
-          <div className="grid grid-cols-2  gap-8 mt-12">
+          <div className="grid grid-cols-2  gap-8 mt-4">
             {[
               { value: "12K+", label: "Active Users" },
               {
@@ -368,9 +370,9 @@ const Home = () => {
                 label: "Client Satisfaction",
               },
             ].map((stat, index) => (
-              <div key={index} className="ml-36">
+              <div key={index} className="lg:ml-36 ml-6">
                 <div
-                  className={`text-[70px] text-white font-bold ${stat.color}`}
+                  className={`lg:text-[70px] text-[45px] text-white font-bold ${stat.color}`}
                 >
                   {stat.value}
                 </div>
@@ -395,7 +397,7 @@ const Home = () => {
         }}
       >
         <div>
-          <h1 className="text-[48px] text-[#092D50] text-center font-semibold mb-4">
+          <h1 className="lg:text-[48px] text-[32px]  text-[#092D50] text-center font-semibold mb-4">
             What Our Users Say{" "}
           </h1>
           <p className="text-[18px] text-center text-[#092D50] font-normal mb-2">
@@ -410,7 +412,7 @@ const Home = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index}>
                 <div className="p-6 bg-white text-center border-[#E0E0E1] shadow-2xl  border-opacity-50  shadow-[#95CFFF61] border rounded-lg max-w-lg py-12 px-6">
-                  <h2 className="text-[24px] text-[#151617] font-medium mb-4">
+                  <h2 className="lg:text-[24px] text-[18px] text-[#151617] font-medium mb-4">
                     {testimonial.title}
                   </h2>
                   <p className="text-[#4F4F4F] mb-6">{testimonial.content}</p>
@@ -444,14 +446,13 @@ const Home = () => {
         }}
       >
         <div>
-          <h1 className="text-[48px] text-[#092D50] text-center font-semibold ">
+          <h1 className="lg:text-[48px] text-[32px] text-[#092D50] text-center font-semibold ">
             Subscription Plans{" "}
           </h1>
-      
         </div>
       </div>
-      <div  className=" container mx-auto -mt-[280px] flex justify-center items-center mb-10">
-      <img src={Plans}/>
+      <div className=" container mx-auto -mt-[280px] flex justify-center items-center mb-10">
+        <img src={Plans} />
       </div>
 
       <Footer />
