@@ -91,7 +91,7 @@ const Home = () => {
         }}
       >
         <div className="container mx-auto lg:px-20 px-8 ">
-          <h1 className="lg:text-[48px] md:text-[32px] sm:[32px] text-[32px] text-center font-semibold pb-4 text-[#ffff]">
+          <h1 className="lg:text-[48px] md:text-[32px] sm:[32px] text-[32px] ml-2 text-center font-semibold pb-4 text-[#ffff]">
             Empowering Your{" "}
             <span className="text-[#3077FF]">Legal Journey</span>
           </h1>
@@ -128,10 +128,10 @@ const Home = () => {
             </div>
           </div>
           <div className=" w-full flex md:flex-row flex-col justify-center gap-4 items-center">
-            <button className=" bg-[#0057FF] rounded-lg lg:text-[18px] text-[14px] font-semibold text-[#ffffff] px-16 py-2 ">
+            <button className=" bg-[#0057FF] hover:bg-transparent border-transparent hover:border border hover:border-[#ffff] rounded-lg lg:text-[18px] text-[14px] font-semibold text-[#ffffff] px-16 py-2 ">
               Try Me
             </button>
-            <button className="bg-transparent border border-[#ffffff]  rounded-lg lg:text-[18px] text-[]14px font-semibold text-[#ffffff] px-10 py-2 ">
+            <button className="bg-transparent border border-[#ffffff] hover:bg-white hover:text-[#0057FF]  rounded-lg lg:text-[18px] text-[]14px font-semibold text-[#ffffff] px-10 py-2 ">
               Learn More
             </button>
           </div>
@@ -145,7 +145,7 @@ const Home = () => {
           Try AiDA, You Will Get the Answer
         </h1>
 
-        <p className="text-sm text-[#092D50] lg:text-[18px] text-[14px] font-medium mb-6">
+        <p className="text-sm text-[#092D50] lg:text-[18px] text-[14px] font-normal mb-6">
           Type your question below and experience AiDA's power.
         </p>
 
@@ -234,7 +234,7 @@ const Home = () => {
                 <p className="text-[#262627] text-[14px] font-normal mb-4">
                   {question.subtitle}
                 </p>
-                <button className="inline-flex items-center text-[14px] text-[#262627] font-medium hover:text-gray-900">
+                <button className="inline-flex items-center text-[15px] text-[#262627] font-normal hover:text-gray-900">
                   Continue to chat
                   <BsArrowRight className="ml-2 h-4 w-4" />
                 </button>
@@ -267,9 +267,9 @@ const Home = () => {
               and effort with accurate and reliable answers
             </p>
             <div className="flex lg:justify-start justify-center ">
-              <button className="bg-transparent border border-[#ffffff]  rounded-lg text-[18px] font-semibold text-[#ffffff] px-10 py-2 ">
-                Learn More
-              </button>
+            <button className="bg-transparent border border-[#ffffff] hover:bg-white hover:text-[#0057FF]  rounded-lg lg:text-[18px] text-[]14px font-semibold text-[#ffffff] px-10 py-2 ">
+              Learn More
+            </button>
             </div>
           </div>
           <div>
@@ -278,7 +278,7 @@ const Home = () => {
         </div>
       </div>
       <div
-        class
+        className="flex justify-center items-center"
         style={{
           backgroundImage: `url(${Layers2})`,
           backgroundSize: "cover", // Ensures the image covers the entire div
@@ -287,22 +287,26 @@ const Home = () => {
           height: "387px", // Example height
           width: "auto", // Example width
         }}
-      ></div>
-
-      <div className=" container mx-auto lg:-mt-[70px] -mt-[270px] flex justify-center items-center">
+      >
         <div>
-          <h1 className="lg:text-[48px] text-[32px] text-[#092D50] text-center font-semibold mb-4">
+        <h1 className="lg:text-[48px] text-[32px] text-[#092D50] text-center font-semibold mb-4">
             Features Sections
           </h1>
           <p className=" lg:text-[18px] text-[14px] text-center text-[#092D50] font-normal mb-2">
             What Can AiDA Do for You?
           </p>
+        </div>
+      </div>
+
+      <div className=" container mx-auto lg:-mt-[70px] -mt-[270px] flex justify-center items-center">
+        <div>
+  
 
           <div className="flex lg:flex-row flex-col gap-4 p-4 mb-24">
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="flex-1 px-8 py-6 bg-white rounded-xl shadow-2xl   shadow-[#95CFFF61] hover:shadow-xl transition-shadow duration-300"
+                className="flex-1 px-8 py-6 bg-white rounded-xl shadow-2xl  shadow-[#95CFFF61] hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-[#262627] text-[30px] font-medium ">
@@ -372,7 +376,7 @@ const Home = () => {
             ].map((stat, index) => (
               <div key={index} className="lg:ml-36 ml-6">
                 <div
-                  className={`lg:text-[70px] text-[45px] text-white font-bold ${stat.color}`}
+                  className={`lg:text-[70px] text-[45px] text-white font-semibold ${stat.color}`}
                 >
                   {stat.value}
                 </div>
